@@ -1,0 +1,69 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+img{
+    max-width: 100%;
+}
+.container{
+    margin: auto;
+    perspective: 70rem;
+    perspective-origin: center;
+}
+
+
+.cube{
+    height: 200px;
+    width: 200px;
+    position: relative;    
+    transform-style: preserve-3d; 
+    animation: rolling 10s linear infinite;
+     
+}
+@keyframes rolling {
+    0%{
+        transform: rotateY( 360deg )
+    }
+}
+.side{
+    position: absolute;
+    height: 100%;
+    width: 100%;    
+    border-radius: 2rem;
+}
+#uno{
+    background: rgb(248, 246, 243);
+    transform: translateZ( 100px );
+}
+#dos{
+    background: rgb(248, 246, 243);
+    transform: translateX( 100px ) rotateY( 90deg );
+    
+}
+#tres{
+    background: rgb(248, 246, 243);
+    transform: translateZ( -100px );
+    
+}
+#cuatro{
+    background: rgb(248, 246, 243);
+    transform: translateX(-100px) rotateY( 90deg );
+    
+}
+#cinco{
+    background: rgb(248, 246, 243);
+    transform: translateY( -100px ) rotateX( 90deg );
+}
+#seis{
+    background: rgb(248, 246, 243);
+    transform: translateY( 100px ) rotateX( 90deg );
+}
